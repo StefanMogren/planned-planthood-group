@@ -12,7 +12,7 @@
         <figure class="header-logo">
           <img src="./assets/plannedplanthoodlogo.svg" alt="" />
         </figure>
-        <figure class="brown-bg">
+        <figure class="header-seedling brown-bg">
           <svg
             class="hamburger"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@
           </svg>
           <img src="./assets/seedling.svg" alt="" />
         </figure>
-        <figure class="green-bg">
+        <figure class="header-spade green-bg">
           <img src="./assets/spade.svg" alt="" />
         </figure>
         <nav class="navigation-list">
@@ -73,12 +73,16 @@
               consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet
               netus amet eu elit.
             </p>
-            <button class="big-btn align-item">Så-tips</button>
+            <button class="big-btn align-btn-end">Så-tips</button>
           </section>
         </section>
 
         <!--Skiljelinje-->
         <figure class="line"></figure>
+
+        <!--Heading for products-->
+<h2 class="heading-2">Våra planerade planteringar:</h2>
+
 
         <!-- Products section -->
         <section class="product-selection">
@@ -87,54 +91,64 @@
             <figure class="gurka">
               <img src="./assets/plant.svg" alt="Gurka" />
             </figure>
-            <h3>Gurka</h3>
-            <p><time datetime="2024-04-15">15 april 2024</time></p>
-            <p>Rico Coolio</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Gurka</h3>
+              <p class="product-date"><time datetime="2024-04-15">15 april 2024</time></p>
+              <p class="product-supplier">Rico Coolio</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
 
           <!-- Tomat Jocke -->
           <article class="product">
             <figure class="tomat-jocke">
-              <img src="./assets/plant.svg" alt="Gurka" />
+              <img src="./assets/plant.svg" alt="Tomat" />
             </figure>
-            <h3>Tomat</h3>
-            <p><time datetime="2024-04-01">1 april 2024</time></p>
-            <p>Jocke</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Tomat</h3>
+              <p class="product-date"><time datetime="2024-04-01">1 april 2024</time></p>
+              <p class="product-supplier">Jocke</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
 
           <!-- Tomat Majvor -->
           <article class="product">
             <figure class="tomat-majvor">
-              <img src="./assets/plant.svg" alt="Gurka" />
+              <img src="./assets/plant.svg" alt="Tomat" />
             </figure>
-            <h3>Tomat</h3>
-            <p><time datetime="2024-04-01">1 april 2024</time></p>
-            <p>Majvor och P-Å</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Tomat</h3>
+              <p class="product-date"><time datetime="2024-04-01">1 april 2024</time></p>
+              <p class="product-supplier">Majvor och P-Å</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
 
           <!-- Sockerärtor -->
           <article class="product">
             <figure class="sockerartor">
-              <img src="./assets/plant.svg" alt="Gurka" />
+              <img src="./assets/plant.svg" alt="Sockerärtor" />
             </figure>
-            <h3>Sockerärtor</h3>
-            <p><time datetime="2024-04-15">15 april 2024</time></p>
-            <p>Frippe</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Sockerärtor</h3>
+              <p class="product-date"><time datetime="2024-04-15">15 april 2024</time></p>
+              <p class="product-supplier">Frippe</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
 
           <!-- Majrova -->
           <article class="product">
             <figure class="majrova">
-              <img src="./assets/plant.svg" alt="Gurka" />
+              <img src="./assets/plant.svg" alt="Majrova" />
             </figure>
-            <h3>Majrova</h3>
-            <p><time datetime="2024-04-01">1 april 2024</time></p>
-            <p>Emma på 4an</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Majrova</h3>
+              <p class="product-date"><time datetime="2024-04-01">1 april 2024</time></p>
+              <p class="product-supplier">Emma på 4an</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
 
           <!-- Squash -->
@@ -142,12 +156,20 @@
             <figure class="squash">
               <img src="./assets/plant.svg" alt="Gurka" />
             </figure>
-            <h3>Squash</h3>
-            <p><time datetime="2024-04-15">15 april 2024</time></p>
-            <p>Perra J</p>
-            <button class="remove-btn">TA BORT</button>
+            <section class="product-info">
+              <h3 class="heading-3">Squash</h3>
+              <p class="product-date"><time datetime="2024-04-15">15 april 2024</time></p>
+              <p class="product-supplier">Perra J</p>
+              <button class="remove-btn">TA BORT</button>
+            </section>
           </article>
         </section>
+
+        <!--Visa fler knapp-->
+<section class="flex-center-btn">
+  <button class="big-btn">Visa fler</button>
+</section>
+
 
         <!--Puff 2, Våra tidigare odlingar-->
         <section class="puff">
@@ -168,7 +190,7 @@
 
       <footer class="footer-section">
         <section class="footer-left">
-          <h4 class="heading-4">Vi hörs!</h4>
+         <div class="footer-heading"><h4 class="heading-4">Vi hörs!</h4></div> 
           <section class="contact-info">
             <address>
               <svg
@@ -188,7 +210,7 @@
               </svg>
               <p class="paragraphs">0701-234567</p>
             </address>
-            <address>
+            <address> <p class="paragraphs">mail@mail.se</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -210,7 +232,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              <p class="paragraphs">mail@mail.se</p>
+             
             </address>
           </section>
         </section>
