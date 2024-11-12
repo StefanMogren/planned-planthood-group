@@ -10,7 +10,7 @@
   --main-green: #0a846e;
   --main-brown: #9e6d52;
   --main-red: #b93857;
-  
+
   --font-family-lato: "Lato";
   --font-family-open-sans: "Open Sans";
   --font-family-maven-pro: "Maven Pro";
@@ -80,8 +80,8 @@ body {
   border: 1px solid rgb(237, 236, 236);
 }
 
-/* Header */
-/* Header */
+/* ---------------Header--------------- */
+/* ---------------Header--------------- */
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -92,10 +92,14 @@ figure {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  position: relative;
 }
 
 .hamburger {
   display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 .header-logo {
@@ -138,7 +142,7 @@ figure {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
-  margin: 3rem 3rem 5rem;
+  margin: 3rem 3rem 3rem;
 }
 
 .seedling-logo {
@@ -147,12 +151,15 @@ figure {
   aspect-ratio: 1;
   max-width: 377px;
   grid-column: auto / span 1;
+}
+
+/* .seedling-logo:nth-child(1) {
   margin-right: 4rem;
 }
 
 .seedling-logo:nth-child(2) {
   margin-left: 4rem;
-}
+} */
 
 .seedling-logo > img {
   width: auto;
@@ -164,7 +171,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  
+
   grid-column: auto / span 1;
 }
 
@@ -172,7 +179,7 @@ figure {
 .line {
   max-width: 333px;
   border-bottom: 3px solid #055647;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
   padding: 0;
 }
 
@@ -187,6 +194,7 @@ main > .heading-2 {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(autofit, minmax(200px, 1fr)); */
   gap: 2rem 1rem;
 }
 
@@ -202,6 +210,7 @@ main > .heading-2 {
 
     .product-supplier {
       font-family: var(--font-family-lato);
+      /* Font size finns det variabel till. Ska de användas eller ej? */
       font-size: 1.1rem;
     }
 
@@ -211,7 +220,7 @@ main > .heading-2 {
       font-family: var(--font-family-open-sans);
     }
   }
-  
+
   figure {
     flex: 100%;
     grid-column: span 2;
@@ -221,7 +230,8 @@ main > .heading-2 {
   }
 }
 
-/* Different plants */
+/* ---------------Different plants--------------- */
+/* ---------------Different plants--------------- */
 .gurka {
   background: url(https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
@@ -246,7 +256,8 @@ main > .heading-2 {
   background: url(https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-/* Buttons */
+/* ---------------Buttons--------------- */
+/* ---------------Buttons--------------- */
 button {
   font-family: var(--font-family-open-sans);
 }
@@ -277,63 +288,60 @@ button {
   align-self: flex-end;
 }
 
-.flex-center-btn{
+.flex-center-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+
   margin-top: 4rem;
 }
 
-
-/* Footer */
+/* ---------------Footer--------------- */
+/* ---------------Footer--------------- */
 .footer-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: url(https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-  no-repeat;
+    no-repeat;
   background-position: center;
   background-size: 100%;
-
 }
 
 .footer-left {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-flex: 1;
-aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  aspect-ratio: 1;
   grid-column: span 2;
   color: #fff;
   background: #000000c9;
 }
 
-.footer-heading{ 
-margin: auto;
+.footer-heading {
+  margin: auto;
 }
 
 .contact-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+
   address {
     display: flex;
     gap: 0.5rem;
     padding: 1rem 0.75rem;
+    font-style: normal;
   }
 }
 
 .footer-right {
   grid-column: 3 / span 2;
-  
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   aspect-ratio: 1;
-
-
 }
 
 .to-top {
@@ -343,7 +351,8 @@ margin: auto;
   padding: 1rem;
 }
 
-/* Media queries */
+/* ---------------Media queries--------------- */
+/* ---------------Media queries--------------- */
 @media screen and (max-width: 600px) {
   :root {
     --font-size-heading-1: 1.5rem;
@@ -353,84 +362,115 @@ margin: auto;
     --font-size-nav: 1.25rem;
     --font-weight-heading-2: 700;
     --font-weight-heading-2: 600;
-    --font-weight-nav: 500; */ 
+    --font-weight-nav: 500; */
   }
-  
+
   .heading-2 {
     text-align: center;
   }
-  
+
   .paragraphs {
     text-align: center;
+    font-size: 0.8rem;
+    padding: 0 1rem;
   }
-  
+
   /* Header */
-  header {
-    grid-template-columns: repeat(1, 1fr);
-  }
 
   .header-logo {
     grid-row: span 1;
+    grid-column: span 2;
+    padding: 10rem 0;
   }
+
+  /* .header-seedling {
+  }
+
+  .header-spade {
+  } */
 
   .hamburger {
     display: inline-block;
-    background-color: #b93857;
-    align-self: flex-end;
   }
-  .navigation-list{
+  .navigation-list {
     display: none;
   }
-  
+
   .puff {
-    display: flex;
+    place-items: center;
+    row-gap: 2rem;
+
+    /* display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 2.5rem;
-    
-    margin: 2.5rem 4.5rem 3rem;
+    align-items: center;
+    gap: 2rem; */
+
+    margin: 2.5rem 0rem 3rem;
+
+    figure {
+      grid-column: span 2;
+    }
   }
-  
-  
+
   .seedling-logo {
-    width: auto;
+    /* padding: 5rem; */
+    /* text-align: center; */
+    /* margin: 0 4.5rem; */
+  }
+
+  .seedling-logo:nth-child(1) {
     margin-right: 0;
   }
 
-  .seedling-logo:nth-child(2) {
-    margin-left: 0;
-}
-  
   .seedling-logo > img {
-    width: 90%;
+    width: 80%;
   }
-  
-  
+  .puff-container {
+    gap: 1rem;
+    width: 100%;
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
   .big-btn {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     align-self: center;
   }
+  .flex-center-btn {
+    margin-top: 2rem;
+  }
 
-  
-  .line{
+  .line {
     width: 202px;
   }
-  
+
+  main > .heading-2 {
+    margin-bottom: 1.3rem;
+  }
+
+  /* Product section */
+  .product-selection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* Footer */
-  
+
   .footer-section {
     background-size: 100vh;
   }
-  
+
   .footer-right {
     grid-column: span 4;
     grid-row: 1;
-    /* aspect-ratio: 1; */
   }
-  
+
   .footer-left {
     grid-column: span 4;
-    /* aspect-ratio: 1; */
+  }
+
+  .heading-4 {
+    font-size: 2rem;
   }
 }
