@@ -126,6 +126,23 @@ header {
   }
 }
 
+/*Header Mina sidor*/
+
+.header-mina-sidor {
+  background: url(https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    no-repeat;
+  background-position: center;
+  background-size: 100%;
+  grid-column: auto / span 2;
+
+  text-align: center;
+  padding: 2.75rem 0 2rem;
+
+  .heading-1 {
+    color: white;
+  }
+}
+
 /* Navigation */
 
 .navigation-list {
@@ -204,7 +221,6 @@ main > .heading-2 {
 }
 
 /* The product selection */
-/* The product selection */
 .product-selection {
   /* padding: 0 2rem; */
   display: grid;
@@ -249,10 +265,10 @@ main > .heading-2 {
     background-repeat: no-repeat;
     background-position: center;
     max-width: 100%;
+    padding: 2rem 0rem;
   }
 }
 
-/* ---------------Different plants--------------- */
 /* ---------------Different plants--------------- */
 .gurka {
   background: url(https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -326,6 +342,8 @@ button {
   padding: 0;
   max-width: 30px;
   margin: 0;
+  display: none;
+  margin-left: auto;
 }
 
 /* ---------------Footer--------------- */
@@ -383,6 +401,56 @@ button {
   padding: 1rem;
 }
 
+/* ---------------Mina sidor--------------- */
+/* ---------------Mina sidor--------------- */
+/* ---------------Mina sidor--------------- */
+.add-plant-form {
+  display: grid;
+}
+.label-form {
+  display: flex;
+  flex-direction: column;
+}
+/* ---------------Footer Mina sidor--------------- */
+/* ---------------Footer Mina sidor--------------- */
+.footer-mina-sidor {
+  padding: 2rem;
+  /* max-width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--main-brown);
+  gap: 1rem;
+
+  figure {
+    grid-column: span 1;
+    height: 18rem;
+  }
+
+  .footer-mina-sidor-img1 {
+    background: url(https://plus.unsplash.com/premium_photo-1678344170545-c3edef92a16e?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .footer-mina-sidor-img2 {
+    background: url(https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .footer-mina-sidor-img3 {
+    background: url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .footer-mina-sidor-img4 {
+    background: url(https://plus.unsplash.com/premium_photo-1681398651047-78491e34f66a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /* ---------------Media queries--------------- */
 /* ---------------Media queries--------------- */
 @media screen and (max-width: 600px) {
@@ -413,6 +481,12 @@ button {
     grid-row: span 1;
     grid-column: span 2;
     padding: 10rem 0;
+  }
+
+  .header-mina-sidor {
+    /* height: 390px; */
+    grid-column: span 2;
+    grid-row: auto;
   }
 
   /* .header-seedling {
@@ -483,8 +557,15 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .product > figure > img {
+    /* display: none; */
+  }
   .product-info > .remove-btn {
     display: none;
+  }
+
+  .paperbin-btn {
+    display: inline-block;
   }
 
   /* Footer */
