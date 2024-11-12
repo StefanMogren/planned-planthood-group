@@ -80,20 +80,24 @@ body {
   border: 1px solid rgb(237, 236, 236);
 }
 
+main {
+  max-width: 100%;
+}
+
 /* ---------------Header--------------- */
 /* ---------------Header--------------- */
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
-figure {
-  display: flex;
+/* La in en egen klass istället, header-figure. För att det annars stylade fler figures längre ned i koden. */
+/* figure {
+  /* display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   position: relative;
-}
+} */
 
 .hamburger {
   display: none;
@@ -108,6 +112,18 @@ figure {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.header-figure {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 /* Navigation */
@@ -141,29 +157,28 @@ figure {
 .puff {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  margin: 3rem 3rem 3rem;
+  gap: 0.5rem;
+  margin: 3rem auto;
+  padding: 0 3rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
+/*figure*/
 .seedling-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--main-green);
   border-radius: 50%;
   aspect-ratio: 1;
-  max-width: 377px;
+  width: 377px;
   grid-column: auto / span 1;
+
+  /* place-items: center; */
 }
-
-/* .seedling-logo:nth-child(1) {
-  margin-right: 4rem;
-}
-
-.seedling-logo:nth-child(2) {
-  margin-left: 4rem;
-} */
-
-.seedling-logo > img {
-  width: auto;
-  aspect-ratio: 1;
+.right-margin {
+  margin-left: auto;
 }
 
 .puff-container {
@@ -191,11 +206,13 @@ main > .heading-2 {
 /* The product selection */
 /* The product selection */
 .product-selection {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-columns: repeat(autofit, minmax(200px, 1fr)); */
+
+  /* grid-template-columns: repeat(autofit, minmax(50px, 1fr)); */
   gap: 2rem 1rem;
+  max-width: 100%;
 }
 
 .product {
@@ -207,6 +224,7 @@ main > .heading-2 {
     grid-template-columns: repeat(2, 1fr);
     align-items: end;
     gap: 1rem;
+    max-width: 100%;
 
     .product-supplier {
       font-family: var(--font-family-lato);
@@ -222,11 +240,15 @@ main > .heading-2 {
   }
 
   figure {
-    flex: 100%;
-    grid-column: span 2;
+    display: grid;
+    /* flex: 100%; */
+    place-items: center;
+
+    /* grid-column: span 2; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 100%;
   }
 }
 
@@ -260,6 +282,7 @@ main > .heading-2 {
 /* ---------------Buttons--------------- */
 button {
   font-family: var(--font-family-open-sans);
+  cursor: pointer;
 }
 .remove-btn {
   padding: 0.5rem;
@@ -294,6 +317,15 @@ button {
   justify-content: center;
 
   margin-top: 4rem;
+}
+
+.paperbin-btn {
+  border: none;
+  display: inline-block;
+  background: none;
+  padding: 0;
+  max-width: 30px;
+  margin: 0;
 }
 
 /* ---------------Footer--------------- */
@@ -399,37 +431,33 @@ button {
   .puff {
     place-items: center;
     row-gap: 2rem;
-
-    /* display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; */
-
     margin: 2.5rem 0rem 3rem;
+    padding: 0 1rem;
 
     figure {
       grid-column: span 2;
+      width: 241px;
+      padding: 0.5rem;
+    }
+
+    img {
+      max-width: 125px;
+      aspect-ratio: 1;
     }
   }
 
-  .seedling-logo {
-    /* padding: 5rem; */
-    /* text-align: center; */
-    /* margin: 0 4.5rem; */
-  }
-
-  .seedling-logo:nth-child(1) {
-    margin-right: 0;
-  }
-
-  .seedling-logo > img {
-    width: 80%;
+  .right-margin {
+    margin-left: 0;
   }
   .puff-container {
     gap: 1rem;
     width: 100%;
     grid-row: 1;
+    grid-column: span 2;
+  }
+
+  .puff-container:nth-child(1) {
+    grid-row: 2;
     grid-column: span 2;
   }
 
@@ -453,6 +481,10 @@ button {
   /* Product section */
   .product-selection {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-info > .remove-btn {
+    display: none;
   }
 
   /* Footer */
