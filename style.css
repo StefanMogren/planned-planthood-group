@@ -14,19 +14,19 @@
   --font-family-lato: "Lato";
   --font-family-open-sans: "Open Sans";
   --font-family-maven-pro: "Maven Pro";
-  --font-size-heading-1: 3rem;
-  --font-size-heading-2: 2rem;
-  --font-size-heading-3: 1.5rem;
-  --font-size-heading-4: 4rem;
-  --font-size-nav: 1.25rem;
-  --font-weight-heading-2: 600;
-  --font-weight-section-heading-2: 700;
-  --font-weight-nav: 500;
+
+  /* --font-size-heading-2: 2rem; */
+  /* --font-size-heading-3: 1.5rem; */
+  /* --font-size-heading-4: 4rem; */
+  /* --font-size-nav: 1.25rem; */
+  /* --font-weight-heading-2: 600; */
+  /* --font-weight-section-heading-2: 700; */
+  /* --font-weight-nav: 500; */
 }
 
 .heading-1 {
   font-family: var(--font-family-lato);
-  font-size: var(--font-size-heading-1);
+  font-size: 3rem;
   text-align: center;
   color: var(--main-green);
   /* text-transform: uppercase; */
@@ -35,33 +35,33 @@
 
 .heading-2 {
   font-family: var(--font-family-lato);
-  font-size: var(--font-size-heading-2);
-  font-weight: var(--font-weight-heading-2);
+  font-size: 2rem;
+  font-weight: 600;
   text-align: center;
   margin: 2.5rem auto;
 }
 
 .min-sida-heading-2 {
   font-family: var(--font-family-open-sans);
-  font-size: var(--font-size-heading-2);
+  font-size: 2rem;
   font-weight: 400;
 }
 
 .section-heading-2 {
   font-family: var(--font-family-open-sans);
-  font-size: var(--font-size-heading-2);
-  font-weight: var(--font-weight-section-heading-2);
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .heading-3 {
   font-family: var(--font-family-lato);
-  font-size: var(--font-size-heading-3);
+  font-size: 1.5rem;
 }
 
 .heading-4 {
   font-family: var(--font-family-maven-pro);
-  font-size: var(--font-size-heading-4);
-  font-weight: var(--font-weight-nav);
+  font-size: 4rem;
+  font-weight: 500;
 }
 
 .paragraphs {
@@ -71,8 +71,8 @@
 
 .nav-links-text {
   font-family: var(--font-family-maven-pro);
-  font-size: var(--font-size-nav);
-  font-weight: var(--font-weight-nav);
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .brown-bg {
@@ -233,7 +233,8 @@ main > .heading-2 {
   margin-bottom: 2.5rem;
 }
 
-/* The product selection */
+/* ---------------The product selection--------------- */
+/* ---------------The product selection--------------- */
 .product-selection {
   margin: 0 2rem;
   display: grid;
@@ -257,7 +258,6 @@ main > .heading-2 {
 
     .product-supplier {
       font-family: var(--font-family-lato);
-      /* Font size finns det variabel till. Ska de användas eller ej? */
       font-size: 1.1rem;
     }
 
@@ -265,14 +265,13 @@ main > .heading-2 {
       margin-left: auto;
       font-weight: 700;
       font-family: var(--font-family-open-sans);
+      text-align: end;
     }
   }
 
   figure {
     display: grid;
-    /* flex: 100%; */
     place-items: center;
-
     /* grid-column: span 2; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -442,8 +441,11 @@ button {
 }
 
 .label-form {
+  font-family: var(--font-family-open-sans);
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+  grid-column: span 1;
 }
 .text-form {
   height: 3rem;
@@ -492,26 +494,52 @@ button {
 }
 
 /* ---------------Media queries--------------- */
+/* ---------------Media queries--------------- */
 @media screen and (max-width: 600px) {
   :root {
-    --font-size-heading-1: 1.5rem;
-    --font-size-heading-2: 1rem;
-    --font-size-heading-3: 0.8rem;
-    /* --font-size-heading-4: 4rem;
-    --font-size-nav: 1.25rem;
-    --font-weight-heading-2: 700;
-    --font-weight-heading-2: 600;
-    --font-weight-nav: 500; */
+    /* --font-size-heading-1: 1.5rem; */
+    /* --font-size-heading-2: 1rem; */
+    /* --font-size-heading-3: 0.8rem; */
   }
 
-  .section-heading-2 {
-    text-align: center;
+  .heading-1 {
+    font-size: 1.5rem;
+  }
+  .heading-2 {
+    font-size: 1rem;
+  }
+  .heading-3 {
+    font-size: 0.8rem;
   }
 
   .paragraphs {
     text-align: center;
     font-size: 0.8rem;
     padding: 0 1rem;
+  }
+
+  .product-info {
+    gap: 0.2rem !important;
+  }
+
+  .product-info > .heading-3 {
+    font-size: 1rem;
+  }
+  .product-info > .product-date {
+    font-size: 0.7rem;
+  }
+  .product > .product-info > .product-supplier {
+    font-size: 0.8rem !important;
+  }
+
+  .section-heading-2 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .min-sida-heading-2 {
+    font-size: 1.5rem;
+    justify-self: center;
   }
 
   /* Header */
@@ -594,12 +622,11 @@ button {
   /* Product section */
   .product-selection {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
   }
 
-
   .product > figure > img {
-    width: 65.3px;
-    height: 89.72px;
+    height: 70%;
   }
   .product-info > .remove-btn {
     display: none;
@@ -608,7 +635,9 @@ button {
   .paperbin-btn {
     display: inline-block;
   }
-
+  .label-form {
+    grid-column: span 2;
+  }
   /* Footer */
 
   .footer-section {
@@ -628,19 +657,18 @@ button {
     font-size: 2rem;
   }
 
+  .add-plant-form {
+    margin: 1rem;
+  }
 
   /* Footer mina-sidor */
   .footer-mina-sidor {
-   margin-top: 2rem;
+    margin-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
-  
+
     figure {
       grid-column: span 1;
       aspect-ratio: 3/2;
     }
-    }
-
-
-
-
+  }
 }
