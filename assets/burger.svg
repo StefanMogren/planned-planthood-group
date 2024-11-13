@@ -1,0 +1,42 @@
+  <svg
+            class="hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="50"
+            height="50"
+            color="#ffffff"
+            fill="none"
+            filter="url(#shadow)"
+          >
+            <defs>
+              <filter id="shadow">
+                <feDropShadow
+                  dx="4"
+                  dy="4"
+                  stdDeviation="4"
+                  flood-color="grey"
+                />
+              </filter>
+            </defs>
+            <path
+              d="M4 5L20 5"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M4 12L20 12"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M4 19L20 19"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
