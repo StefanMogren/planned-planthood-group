@@ -14,14 +14,6 @@
   --font-family-lato: "Lato";
   --font-family-open-sans: "Open Sans";
   --font-family-maven-pro: "Maven Pro";
-
-  /* --font-size-heading-2: 2rem; */
-  /* --font-size-heading-3: 1.5rem; */
-  /* --font-size-heading-4: 4rem; */
-  /* --font-size-nav: 1.25rem; */
-  /* --font-weight-heading-2: 600; */
-  /* --font-weight-section-heading-2: 700; */
-  /* --font-weight-nav: 500; */
 }
 
 .heading-1 {
@@ -29,7 +21,6 @@
   font-size: 3rem;
   text-align: center;
   color: var(--main-green);
-  /* text-transform: uppercase; */
   margin-top: 2.25rem;
 }
 
@@ -45,6 +36,7 @@
   font-family: var(--font-family-open-sans);
   font-size: 2rem;
   font-weight: 400;
+  grid-column: span 2;
 }
 
 .section-heading-2 {
@@ -83,6 +75,10 @@
   background-color: var(--main-green);
 }
 
+.white-text {
+  color: white;
+}
+
 body {
   background: #fcf6fc;
 }
@@ -94,24 +90,12 @@ body {
   border: 1px solid rgb(237, 236, 236);
 }
 
-main {
-  max-width: 100%;
-}
-
 /* ---------------Header--------------- */
 /* ---------------Header--------------- */
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-/* La in en egen klass istället, header-figure. För att det annars stylade fler figures längre ned i koden. */
-/* figure {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  position: relative;
-} */
 
 .hamburger {
   display: none;
@@ -134,13 +118,14 @@ header {
   align-items: center;
   padding: 2rem;
   position: relative;
-
-  img {
-    max-width: 100%;
-  }
 }
 
-/*Header Mina sidor*/
+.header-figure > .header-img {
+  max-width: 100%;
+}
+
+/* ---------------Header Mina sidor--------------- */
+/* ---------------Header Mina sidor--------------- */
 
 .header-mina-sidor {
   background: url(https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
@@ -151,13 +136,10 @@ header {
 
   text-align: center;
   padding: 2.75rem 0 2rem;
-
-  .heading-1 {
-    color: white;
-  }
 }
 
-/* Navigation */
+/* ---------------Navigation--------------- */
+/* ---------------Navigation--------------- */
 .navigation-list {
   padding: 0rem;
   grid-column: span 2;
@@ -182,8 +164,8 @@ header {
   text-decoration: none;
 }
 
-/* Upper puff */
-/* Upper puff */
+/* ---------------Upper puff--------------- */
+/* ---------------Upper puff--------------- */
 .puff {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -194,19 +176,21 @@ header {
   width: 100%;
 }
 
-/*figure*/
+/* Green circle figure */
+
 .seedling-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   background-color: var(--main-green);
   border-radius: 50%;
   aspect-ratio: 1;
   width: 377px;
   grid-column: auto / span 1;
-
-  /* place-items: center; */
 }
+.seedling-img {
+  max-width: 250px;
+}
+
 .right-margin {
   margin-left: auto;
 }
@@ -239,46 +223,41 @@ main > .heading-2 {
   margin: 0 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  /* grid-template-columns: repeat(autofit, minmax(50px, 1fr)); */
   gap: 2rem 1rem;
   max-width: 100%;
 }
 
 .product {
   box-shadow: 3px 4px 4px 0px #00000040;
+}
+.product-info {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  gap: 1rem;
+  max-width: 100%;
+}
+.product-supplier {
+  font-family: var(--font-family-lato);
+  font-size: 1.1rem;
+}
 
-  .product-info {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: end;
-    gap: 1rem;
-    max-width: 100%;
+.product-date {
+  margin-left: auto;
+  font-weight: 700;
+  font-family: var(--font-family-open-sans);
+  text-align: end;
+}
 
-    .product-supplier {
-      font-family: var(--font-family-lato);
-      font-size: 1.1rem;
-    }
-
-    .product-date {
-      margin-left: auto;
-      font-weight: 700;
-      font-family: var(--font-family-open-sans);
-      text-align: end;
-    }
-  }
-
-  figure {
-    display: grid;
-    place-items: center;
-    /* grid-column: span 2; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 100%;
-    padding: 2rem 0rem;
-  }
+.product > .product-image {
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  padding: 2rem 0rem;
 }
 
 /* ---------------Different plants--------------- */
@@ -309,6 +288,9 @@ main > .heading-2 {
 
 /* ---------------Buttons--------------- */
 /* ---------------Buttons--------------- */
+
+/* Medvetet val att styla direkt i buttonelementet, eftersom vi vill att det ska gälla för samtliga buttons */
+
 button {
   font-family: var(--font-family-open-sans);
   cursor: pointer;
@@ -348,7 +330,6 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   margin-top: 4rem;
 }
 
@@ -366,6 +347,7 @@ button {
   font-size: 22px;
 }
 
+/* ---------------Footer--------------- */
 /* ---------------Footer--------------- */
 .footer-section {
   display: grid;
@@ -395,13 +377,13 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
 
-  address {
-    display: flex;
-    gap: 0.5rem;
-    padding: 1rem 0.75rem;
-    font-style: normal;
-  }
+.contact-info > .contact-adress {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0.75rem;
+  font-style: normal;
 }
 
 .footer-right {
@@ -430,14 +412,8 @@ button {
   margin: 3rem 2rem;
 }
 
-.span-one {
-  grid-column: span 1;
-}
 .span-two {
   grid-column: span 2;
-}
-.span-three {
-  grid-column: span 3;
 }
 
 .label-form {
@@ -454,6 +430,7 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
 }
 /* ---------------Footer Mina sidor--------------- */
+/* ---------------Footer Mina sidor--------------- */
 .footer-mina-sidor {
   padding: 1.5rem;
   margin-top: 4rem;
@@ -462,46 +439,38 @@ button {
   grid-template-columns: repeat(4, 1fr);
   background-color: var(--main-brown);
   gap: 1rem;
+}
+.footer-aspect {
+  aspect-ratio: 2/3;
+}
 
-  figure {
-    grid-column: span 1;
-    aspect-ratio: 2/3;
-  }
+.footer-mina-sidor-img1 {
+  background: url(https://plus.unsplash.com/premium_photo-1678344170545-c3edef92a16e?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
 
-  .footer-mina-sidor-img1 {
-    background: url(https://plus.unsplash.com/premium_photo-1678344170545-c3edef92a16e?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-  }
+.footer-mina-sidor-img2 {
+  background: url(https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
 
-  .footer-mina-sidor-img2 {
-    background: url(https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-  }
+.footer-mina-sidor-img3 {
+  background: url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
 
-  .footer-mina-sidor-img3 {
-    background: url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-  }
-
-  .footer-mina-sidor-img4 {
-    background: url(https://plus.unsplash.com/premium_photo-1681398651047-78491e34f66a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-  }
+.footer-mina-sidor-img4 {
+  background: url(https://plus.unsplash.com/premium_photo-1681398651047-78491e34f66a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
 }
 
 /* ---------------Media queries--------------- */
 /* ---------------Media queries--------------- */
 @media screen and (max-width: 600px) {
-  :root {
-    /* --font-size-heading-1: 1.5rem; */
-    /* --font-size-heading-2: 1rem; */
-    /* --font-size-heading-3: 0.8rem; */
-  }
-
   .heading-1 {
     font-size: 1.5rem;
   }
@@ -519,17 +488,19 @@ button {
   }
 
   .product-info {
-    gap: 0.2rem !important;
+    gap: 0.2rem;
   }
 
   .product-info > .heading-3 {
     font-size: 1rem;
   }
+
   .product-info > .product-date {
     font-size: 0.7rem;
   }
+
   .product > .product-info > .product-supplier {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
   }
 
   .section-heading-2 {
@@ -542,7 +513,8 @@ button {
     justify-self: center;
   }
 
-  /* Header */
+  /* ---------------Header--------------- */
+  /* ---------------Header--------------- */
 
   .header-logo {
     grid-row: span 1;
@@ -551,40 +523,36 @@ button {
   }
 
   .header-mina-sidor {
-    /* height: 390px; */
     grid-column: span 2;
     grid-row: auto;
   }
 
-  /* .header-seedling {
-  }
-
-  .header-spade {
-  } */
-
   .hamburger {
     display: inline-block;
   }
+
   .navigation-list {
     display: none;
   }
 
+  /* ---------------Puff section---------------*/
+  /* ---------------Puff section---------------*/
   .puff {
     place-items: center;
     row-gap: 2rem;
     margin: 2.5rem 0rem 3rem;
     padding: 0 1rem;
+  }
 
-    figure {
-      grid-column: span 2;
-      width: 241px;
-      padding: 0.5rem;
-    }
+  .puff > figure {
+    grid-column: span 2;
+    width: 241px;
+    padding: 0.5rem;
+  }
 
-    img {
-      max-width: 125px;
-      aspect-ratio: 1;
-    }
+  .seedling-img {
+    max-width: 125px;
+    aspect-ratio: 1;
   }
 
   .right-margin {
@@ -619,7 +587,8 @@ button {
     margin-bottom: 1.3rem;
   }
 
-  /* Product section */
+  /* ---------------Product section--------------- */
+  /* ---------------Product section--------------- */
   .product-selection {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 1rem;
@@ -638,8 +607,9 @@ button {
   .label-form {
     grid-column: span 2;
   }
-  /* Footer */
 
+  /* ---------------Footer--------------- */
+  /* ---------------Footer--------------- */
   .footer-section {
     background-size: 100vh;
   }
@@ -661,14 +631,13 @@ button {
     margin: 1rem;
   }
 
-  /* Footer mina-sidor */
+  /* ---------------Footer mina-sidor--------------- */
+  /* ---------------Footer mina-sidor--------------- */
   .footer-mina-sidor {
     margin-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
-
-    figure {
-      grid-column: span 1;
-      aspect-ratio: 3/2;
-    }
+  }
+  .footer-aspect {
+    aspect-ratio: 3/2;
   }
 }
