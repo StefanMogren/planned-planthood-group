@@ -19,8 +19,8 @@
   --font-size-heading-3: 1.5rem;
   --font-size-heading-4: 4rem;
   --font-size-nav: 1.25rem;
-  --font-weight-heading-2: 700;
   --font-weight-heading-2: 600;
+  --font-weight-section-heading-2: 700;
   --font-weight-nav: 500;
 }
 
@@ -37,6 +37,19 @@
   font-family: var(--font-family-lato);
   font-size: var(--font-size-heading-2);
   font-weight: var(--font-weight-heading-2);
+  text-align: center;
+  margin: 2.5rem auto;
+}
+
+.min-sida-heading-2 {
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-heading-2);
+}
+
+.section-heading-2 {
+  font-family: var(--font-family-open-sans);
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-section-heading-2);
 }
 
 .heading-3 {
@@ -211,7 +224,7 @@ header {
 .line {
   max-width: 333px;
   border-bottom: 3px solid #055647;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -222,7 +235,7 @@ main > .heading-2 {
 
 /* The product selection */
 .product-selection {
-  /* padding: 0 2rem; */
+  margin: 0 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -269,6 +282,7 @@ main > .heading-2 {
   }
 }
 
+/* ---------------Different plants--------------- */
 /* ---------------Different plants--------------- */
 .gurka {
   background: url(https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -340,10 +354,14 @@ button {
   display: inline-block;
   background: none;
   padding: 0;
-  max-width: 30px;
   margin: 0;
   display: none;
   margin-left: auto;
+}
+
+.paper-bin-style {
+  color: #b93857;
+  font-size: 22px;
 }
 
 /* ---------------Footer--------------- */
@@ -406,10 +424,29 @@ button {
 /* ---------------Mina sidor--------------- */
 .add-plant-form {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
+
+.span-one {
+  grid-column: span 1;
+}
+.span-two {
+  grid-column: span 2;
+}
+.span-three {
+  grid-column: span 3;
+}
+
 .label-form {
   display: flex;
   flex-direction: column;
+}
+.text-form {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
 }
 /* ---------------Footer Mina sidor--------------- */
 /* ---------------Footer Mina sidor--------------- */
@@ -465,7 +502,7 @@ button {
     --font-weight-nav: 500; */
   }
 
-  .heading-2 {
+  .section-heading-2 {
     text-align: center;
   }
 
