@@ -1,224 +1,218 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Planned Planthood - Home</title>
-    <script
-      src="https://kit.fontawesome.com/1915f4dc40.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <figure class="header-figure header-logo">
-          <img class="hamburger" src="assets/burger.svg" alt="Hamburgermeny" />
-          <img src="./assets/plannedplanthoodlogo.svg" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Planned Planthood - Home</title>
+  <script
+  src="https://kit.fontawesome.com/1915f4dc40.js"
+  crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- Header -->
+    <header>
+      <figure class="header-figure header-logo">
+        <img class="hamburger" src="assets/burger.svg" alt="Hamburgermeny" />
+        <img src="./assets/plannedplanthoodlogo.svg" alt="" />
+      </figure>
+      <figure class="header-figure brown-bg">
+        <img class="header-img" src="./assets/seedling.svg" alt="" />
+      </figure>
+      <figure class="header-figure green-bg">
+        <img class="header-img" src="./assets/spade.svg" alt="" />
+      </figure>
+      
+      <!-- Navigation -->
+      <nav class="navigation-list">
+        <ul class="navigation-list-item">
+          <li class="nav-links-text"><a href="index.html">PLANNER</a></li>
+          <li class="nav-links-text"><a href="">HISTORIK</a></li>
+          <li class="nav-links-text"><a href="">TIPS</a></li>
+          <li class="nav-links-text">
+            <a href="mina-sidor.html">LOGGA IN</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- H1, rubrik -->
+      <h1 class="heading-1">PLANNED PLANTHOOD</h1>
+      
+      <!--puff 1, section för säsong att så-->
+      <section class="puff">
+        <figure class="seedling-logo">
+          <img
+          class="seedling-img"
+          src="assets/seedpackage.svg"
+          alt="seedling package"
+          />
         </figure>
-        <figure class="header-figure brown-bg">
-          <img class="header-img" src="./assets/seedling.svg" alt="" />
-        </figure>
-        <figure class="header-figure green-bg">
-          <img class="header-img" src="./assets/spade.svg" alt="" />
-        </figure>
-
-        <!-- Navigation -->
-        <nav class="navigation-list">
-          <ul class="navigation-list-item">
-            <li class="nav-links-text"><a href="index.html">PLANNER</a></li>
-            <li class="nav-links-text"><a href="">HISTORIK</a></li>
-            <li class="nav-links-text"><a href="">TIPS</a></li>
-            <li class="nav-links-text">
-              <a href="mina-sidor.html">LOGGA IN</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <h1 class="heading-1">PLANNED PLANTHOOD</h1>
-
-        <!--puff 1, section för säsong att så-->
-        <section class="puff">
-          <figure class="seedling-logo">
-            <img
-              class="seedling-img"
-              src="assets/seedpackage.svg"
-              alt="seedling package"
-            />
+        <section class="puff-container">
+          <h2 class="section-heading-2">Säsong att så</h2>
+          <p class="paragraphs">
+            Våren är äntligen här i kollektivet! Lorem ipsum dolor sit amet
+            consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet
+            netus amet eu elit.
+          </p>
+          <button class="big-btn align-btn-end">Så-tips</button>
+        </section>
+      </section>
+      
+      <!--Skiljelinje-->
+      <figure class="line"></figure>
+      
+      <!--Heading for products-->
+      <h2 class="heading-2">Våra planerade planteringar:</h2>
+      
+      <!-- Products section -->
+      <section class="product-selection">
+        
+        <!-- Gurka -->
+        <article class="product">
+          <figure class="product-image gurka">
+            <img src="./assets/plant.svg" alt="Gurka" />
           </figure>
-          <section class="puff-container">
-            <h2 class="section-heading-2">Säsong att så</h2>
-            <p class="paragraphs">
-              Våren är äntligen här i kollektivet! Lorem ipsum dolor sit amet
-              consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet
-              netus amet eu elit.
-            </p>
-            <button class="big-btn align-btn-end">Så-tips</button>
+          <section class="product-info">
+            <h3 class="heading-3">Gurka</h3>
+            <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+            <p class="product-supplier">Rico Coolio</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
           </section>
-        </section>
-
-        <!--Skiljelinje-->
-        <figure class="line"></figure>
-
-        <!--Heading for products-->
-        <h2 class="heading-2">Våra planerade planteringar:</h2>
-
-        <!-- Products section -->
-        <section class="product-selection">
-          <!-- Gurka -->
-          <article class="product">
-            <figure class="product-image gurka">
-              <img src="./assets/plant.svg" alt="Gurka" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Gurka</h3>
-              <p class="product-date">
-                <time datetime="2024-04-15">15 april 2024</time>
-              </p>
-              <p class="product-supplier">Rico Coolio</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-
-          <!-- Tomat Jocke -->
-          <article class="product">
-            <figure class="product-image tomat-jocke">
-              <img src="./assets/plant.svg" alt="Tomat" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Tomat</h3>
-              <p class="product-date">
-                <time datetime="2024-04-01">1 april 2024</time>
-              </p>
-              <p class="product-supplier">Jocke</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-
-          <!-- Tomat Majvor -->
-          <article class="product">
-            <figure class="product-image tomat-majvor">
-              <img src="./assets/plant.svg" alt="Tomat" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Tomat</h3>
-              <p class="product-date">
-                <time datetime="2024-04-01">1 april 2024</time>
-              </p>
-              <p class="product-supplier">Majvor och P-Å</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-
-          <!-- Sockerärtor -->
-          <article class="product">
-            <figure class="product-image sockerartor">
-              <img src="./assets/plant.svg" alt="Sockerärtor" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Sockerärtor</h3>
-              <p class="product-date">
-                <time datetime="2024-04-15">15 april 2024</time>
-              </p>
-              <p class="product-supplier">Frippe</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-
-          <!-- Majrova -->
-          <article class="product">
-            <figure class="product-image majrova">
-              <img src="./assets/plant.svg" alt="Majrova" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Majrova</h3>
-              <p class="product-date">
-                <time datetime="2024-04-01">1 april 2024</time>
-              </p>
-              <p class="product-supplier">Emma på 4an</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-
-          <!-- Squash -->
-          <article class="product">
-            <figure class="product-image squash">
-              <img src="./assets/plant.svg" alt="Gurka" />
-            </figure>
-            <section class="product-info">
-              <h3 class="heading-3">Squash</h3>
-              <p class="product-date">
-                <time datetime="2024-04-15">15 april 2024</time>
-              </p>
-              <p class="product-supplier">Perra J</p>
-              <button class="remove-btn">TA BORT</button>
-              <button class="paperbin-btn paper-bin-style">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </section>
-          </article>
-        </section>
-
-        <!--Visa fler knapp-->
-        <section class="flex-center-btn">
-          <button class="big-btn">VISA FLER</button>
-        </section>
-
-        <!--Puff 2, Våra tidigare odlingar-->
-        <section class="puff">
-          <section class="puff-container">
-            <h2 class="section-heading-2">Våra tidigare odlingar</h2>
-            <p class="paragraphs">
-              Våren är äntligen här i kollektivet! Lorem ipsum dolor sit amet
-              consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet
-              netus amet eu elit.
-            </p>
-            <button class="big-btn">Planterade plantor</button>
-          </section>
-          <figure class="seedling-logo right-margin">
-            <img class="seedling-img" src="assets/plant.svg" alt="Plant" />
+        </article>
+        
+        <!-- Tomat Jocke -->
+        <article class="product">
+          <figure class="product-image tomat-jocke">
+            <img src="./assets/plant.svg" alt="Tomat" />
           </figure>
-        </section>
-      </main>
-
-      <footer class="footer-section">
-        <section class="footer-left">
-          <div class="footer-heading"><h4 class="heading-4">Vi hörs!</h4></div>
-          <section class="contact-info">
-            <address class="contact-adress"><img src="assets/phone.svg" alt="Phone icon">
-              <p class="paragraphs">0701-234567</p>
-            </address>
-            <address class="contact-adress">
-              <p class="paragraphs">mail@mail.se</p><img src="assets/mail.svg" alt="mail icon">
-           
-            </address>
+          <section class="product-info">
+            <h3 class="heading-3">Tomat</h3>
+            <time datetime="2024-04-01" class="product-date">1 april 2024</time>
+            <p class="product-supplier">Jocke</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
           </section>
+        </article>
+        
+        <!-- Tomat Majvor -->
+        <article class="product">
+          <figure class="product-image tomat-majvor">
+            <img src="./assets/plant.svg" alt="Tomat" />
+          </figure>
+          <section class="product-info">
+            <h3 class="heading-3">Tomat</h3>
+            <time datetime="2024-04-01" class="product-date">1 april 2024</time>
+            <p class="product-supplier">Majvor och P-Å</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </section>
+        </article>
+        
+        <!-- Sockerärtor -->
+        <article class="product">
+          <figure class="product-image sockerartor">
+            <img src="./assets/plant.svg" alt="Sockerärtor" />
+          </figure>
+          <section class="product-info">
+            <h3 class="heading-3">Sockerärtor</h3>
+            <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+            <p class="product-supplier">Frippe</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </section>
+        </article>
+        
+        <!-- Majrova -->
+        <article class="product">
+          <figure class="product-image majrova">
+            <img src="./assets/plant.svg" alt="Majrova" />
+          </figure>
+          <section class="product-info">
+            <h3 class="heading-3">Majrova</h3>
+            <time datetime="2024-04-01" class="product-date">1 april 2024</time>
+            <p class="product-supplier">Emma på 4an</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </section>
+        </article>
+        
+        <!-- Squash -->
+        <article class="product">
+          <figure class="product-image squash">
+            <img src="./assets/plant.svg" alt="Gurka" />
+          </figure>
+          <section class="product-info">
+            <h3 class="heading-3">Squash</h3>
+            <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+            <p class="product-supplier">Perra J</p>
+            <button class="remove-btn">TA BORT</button>
+            <button class="paperbin-btn paper-bin-style">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </section>
+        </article>
+      </section>
+      
+      <!--Visa fler knapp-->
+      <section class="flex-center-btn">
+        <button class="big-btn">VISA FLER</button>
+      </section>
+      
+      <!--Puff 2, Våra tidigare odlingar-->
+      <section class="puff">
+        <section class="puff-container">
+          <h2 class="section-heading-2">Våra tidigare odlingar</h2>
+          <p class="paragraphs">
+            Våren är äntligen här i kollektivet! Lorem ipsum dolor sit amet
+            consectetur. Sit venenatis arcu nunc consectetur neque. Vel amet
+            netus amet eu elit.
+          </p>
+          <button class="big-btn">Planterade plantor</button>
         </section>
-        <section class="footer-right">
-          <img src="assets/plannedplanthoodlogo.svg" alt="" />
+        <figure class="seedling-logo right-margin">
+          <img class="seedling-img" src="assets/plant.svg" alt="Plant" />
+        </figure>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer-section">
+      <section class="footer-left">
+        <div class="footer-heading"><h4 class="heading-4">Vi hörs!</h4></div>
+        <section class="contact-info">
+          <address class="contact-adress"><img src="assets/phone.svg" alt="Phone icon">
+            <p class="paragraphs">0701-234567</p>
+          </address>
+          <address class="contact-adress">
+            <p class="paragraphs">mail@mail.se</p><img src="assets/mail.svg" alt="mail icon">
+            
+          </address>
         </section>
-
-        <section class="to-top">
-          <h3 class="heading-3">Till toppen av sidan</h3>
-        </section>
-      </footer>
-    </div>
-  </body>
+      </section>
+      <section class="footer-right">
+        <img src="assets/plannedplanthoodlogo.svg" alt="" />
+      </section>
+      
+      <!-- Till toppen av sidan -->
+      <section class="to-top">
+        <h3 class="heading-3">Till toppen av sidan</h3>
+      </section>
+    </footer>
+  </div>
+</body>
 </html>

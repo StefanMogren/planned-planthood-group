@@ -1,143 +1,135 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Planned Planthood - Mina sidor</title>
-    <script
-      src="https://kit.fontawesome.com/1915f4dc40.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <!-- Navigation -->
-        <nav class="navigation-list">
-          <ul class="navigation-list-item">
-            <li class="nav-links-text"><a href="index.html">PLANNER</a></li>
-            <li class="nav-links-text"><a href="">HISTORIK</a></li>
-            <li class="nav-links-text"><a href="">TIPS</a></li>
-            <li class="nav-links-text">
-              <a href="mina-sidor.html">LOGGA IN</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- logofiguren här -->
-
-        <figure class="header-mina-sidor">
-          <img
-            class="hamburger"
-            src="assets/burger.svg"
-            alt="Hamburgermeny"
-          /><img
-            src="assets/plannedplanthoodlogo.svg"
-            alt="planned planthood logga"
-          />
-          <h1 class="heading-1 white-text">Mina sidor</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Planned Planthood - Mina sidor</title>
+  <script
+  src="https://kit.fontawesome.com/1915f4dc40.js"
+  crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      
+      <!-- Navigation -->
+      <nav class="navigation-list">
+        <ul class="navigation-list-item">
+          <li class="nav-links-text"><a href="index.html">PLANNER</a></li>
+          <li class="nav-links-text"><a href="">HISTORIK</a></li>
+          <li class="nav-links-text"><a href="">TIPS</a></li>
+          <li class="nav-links-text">
+            <a href="mina-sidor.html">LOGGA IN</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Header figure -->
+      <figure class="header-mina-sidor">
+        <img
+        class="hamburger"
+        src="assets/burger.svg"
+        alt="Hamburgermeny"
+        /><img
+        src="assets/plannedplanthoodlogo.svg"
+        alt="planned planthood logga"
+        />
+        <h1 class="heading-1 white-text">Mina sidor</h1>
+      </figure>
+    </header>
+    
+    <!-- Input form -->
+    <form class="add-plant-form">
+      <h2 class="min-sida-heading-2 span-two">Lägg till ny plantering:</h2>
+      <label class="label-form">
+        Planta:
+        <input type="text" class="text-form" />
+      </label>
+      <label class="label-form">
+        Datum:
+        <input type="text" class="text-form" />
+      </label>
+      <button class="big-btn span-two justify-grid-center">LÄGG TILL</button>
+    </form>
+    
+    <!-- Dina planerade planteringar -->
+    <h2 class="heading-2">Dina planerade planteringar</h2>
+    
+    <!-- Products section -->
+    <section class="product-selection">
+      <!-- Ensam gurka produkt -->
+      <article class="product">
+        <figure class="product-image gurka">
+          <img src="./assets/plant.svg" alt="Gurka" />
         </figure>
-      </header>
-
-      <!-- form här -->
-      <form class="add-plant-form">
-        <h2 class="min-sida-heading-2 span-two">Lägg till ny plantering:</h2>
-        <label class="label-form">
-          Planta:
-          <input type="text" class="text-form" />
-        </label>
-        <label class="label-form">
-          Datum:
-          <input type="text" class="text-form" />
-        </label>
-        <button class="big-btn span-two justify-grid-center">LÄGG TILL</button>
-      </form>
-      <!-- Dina planerade planteringar -->
-
-      <h2 class="heading-2">Dina planerade planteringar</h2>
-
-      <!-- Products section -->
-      <section class="product-selection">
-        <!-- Ensam produkt, gurka -->
-        <article class="product">
-          <figure class="product-image gurka">
-            <img src="./assets/plant.svg" alt="Gurka" />
-          </figure>
-          <section class="product-info">
-            <h3 class="heading-3">Gurka</h3>
-            <!-- <p class="product-date"> -->
-            <time datetime="2024-04-15" class="product-date"
-              >15 april 2024</time
-            >
-            <!-- </p> -->
-
-            <p class="product-supplier">Rico Coolio</p>
-            <button class="remove-btn">TA BORT</button>
-            <button class="paperbin-btn paper-bin-style">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </section>
-        </article>
-      </section>
-
-      <!-- Dina planerade planteringar tva -->
-      <h2 class="heading-2">Dina planterade planteringar</h2>
-      <!-- Två gurkor -->
-      <section class="product-selection">
-        <!-- Ensam produkt, gurka -->
-        <article class="product">
-          <figure class="product-image gurka">
-            <img src="./assets/plant.svg" alt="Gurka" />
-          </figure>
-          <section class="product-info">
-            <h3 class="heading-3">Gurka</h3>
-            <!-- <p class="product-date"> -->
-            <time datetime="2024-04-15" class="product-date"
-              >15 april 2024</time
-            >
-            <!-- </p> -->
-            <p class="product-supplier">Rico Coolio</p>
-            <button class="remove-btn">TA BORT</button>
-            <button class="paperbin-btn paper-bin-style">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </section>
-        </article>
-        <article class="product">
-          <figure class="product-image gurka">
-            <img src="./assets/plant.svg" alt="Gurka" />
-          </figure>
-          <section class="product-info">
-            <h3 class="heading-3">Gurka</h3>
-            <!-- <p class="product-date"> -->
-            <time datetime="2024-04-15" class="product-date"
-              >15 april 2024</time
-            >
-            <!-- </p> -->
-            <p class="product-supplier">Rico Coolio</p>
-            <button class="remove-btn">TA BORT</button>
-            <button class="paperbin-btn paper-bin-style">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </section>
-        </article>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <section class="footer-mina-sidor">
-          <figure class="footer-aspect footer-mina-sidor-img1"></figure>
-          <figure class="footer-aspect footer-mina-sidor-img2"></figure>
-          <figure class="footer-aspect footer-mina-sidor-img3"></figure>
-          <figure class="footer-aspect footer-mina-sidor-img4"></figure>
+        <section class="product-info">
+          <h3 class="heading-3">Gurka</h3>
+          <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+          <p class="product-supplier">Rico Coolio</p>
+          <button class="remove-btn">TA BORT</button>
+          <button class="paperbin-btn paper-bin-style">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
         </section>
-        <section class="to-top">
-          <h3 class="heading-3">Till toppen av sidan</h3>
+      </article>
+    </section>
+    
+    <!-- Dina planerade planteringar tva -->
+    <h2 class="heading-2">Dina planterade planteringar</h2>
+    <!-- Tva gurkor -->
+    <section class="product-selection">
+      
+      <!-- Tva gurkor tillsammans <3 -->
+      <article class="product">
+        <figure class="product-image gurka">
+          <img src="./assets/plant.svg" alt="Gurka" />
+        </figure>
+        <section class="product-info">
+          <h3 class="heading-3">Gurka</h3>
+          <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+          <p class="product-supplier">Rico Coolio</p>
+          <button class="remove-btn">TA BORT</button>
+          <button class="paperbin-btn paper-bin-style">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
         </section>
-      </footer>
-
+      </article>
+      
+      <!-- Gurka tva -->
+      <article class="product">
+        <figure class="product-image gurka">
+          <img src="./assets/plant.svg" alt="Gurka" />
+        </figure>
+        <section class="product-info">
+          <h3 class="heading-3">Gurka</h3>
+          <time datetime="2024-04-15" class="product-date">15 april 2024</time>
+          <p class="product-supplier">Rico Coolio</p>
+          <button class="remove-btn">TA BORT</button>
+          <button class="paperbin-btn paper-bin-style">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </section>
+      </article>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <section class="footer-mina-sidor">
+        <figure class="footer-aspect footer-mina-sidor-img1"></figure>
+        <figure class="footer-aspect footer-mina-sidor-img2"></figure>
+        <figure class="footer-aspect footer-mina-sidor-img3"></figure>
+        <figure class="footer-aspect footer-mina-sidor-img4"></figure>
+      </section>
+      
       <!-- Till toppen av sidan -->
-    </div>
-  </body>
+      <section class="to-top">
+        <h3 class="heading-3">Till toppen av sidan</h3>
+      </section>
+    </footer>
+    
+    
+  </div>
+</body>
 </html>
